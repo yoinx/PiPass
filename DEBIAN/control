@@ -1,0 +1,9 @@
+Package: PiPass
+Version: 1.3
+Section: base
+Priority: optional
+Architecture: i386
+Maintainer: Roen Wainscoat <roenw22@gmail.com>
+Description: PiPass provides a simple blockpage
+ and method to temporarily bypass a block
+ made by your Pi-Hole system.

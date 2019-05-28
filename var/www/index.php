@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('/etc/pipass/config.ini');
 
 $url =  "{$_SERVER['HTTP_HOST']}";
 $bpLocal = $conf['blockpage_url'];

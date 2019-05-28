@@ -1,5 +1,5 @@
 <?php
-require('../../config.php');
+require('/etc/pipass/config.ini');
 
 $GLOBALS['unblockTimeSec'] = $conf['unblock_seconds'];
 $hostname = gethostname();

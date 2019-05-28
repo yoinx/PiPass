@@ -1,5 +1,5 @@
 <?php
-require('../config.php');
+require('/etc/pipass/config.ini');
 
 $safeurl = $conf['safeurl'];
 $adminemail = $conf['adminemail'];
