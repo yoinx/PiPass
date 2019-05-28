@@ -73,6 +73,7 @@ function install() {
     echo "[ / ] Now making sure that your document root folder is clear...\n";
     $drf_local = $GLOBALS['document_root'];
     $drfiles = exec("ls $drf_local | grep index");
+    exec("cd $drf_local && rm -r pipass");
     if(!empty($drfiles)) {
         echo "[ - ] It looks like there are index files in your webroot. Such as index.php, index.html, etc. Please remove them or change their name to continue installation.\n";
         exit;
@@ -94,7 +95,7 @@ function install() {
 
     $latestVersion = get_data("https://apps.roen.us/pipass/currentversion/");
     exec("cd $drf_local/pipass && sudo git checkout tags/v$latestVersion");
-    echo "[ + ] Selected version v1.2b\n";
+    echo "[ + ] Selected version v$latestVersion\n";
     echo "[ + ] Moving all files up a directory...\n";
     exec("cd $drf_local && sudo mv pipass/* .");
     echo "[ + ] Success.\n";
